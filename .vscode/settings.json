@@ -1,5 +1,15 @@
 {
+    "jsonnet.languageServer.enableAutoUpdate": false,
+    "editor.formatOnSave": true,
     "jupyter.debugJustMyCode": false,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "notebook.output.scrolling": true,
+    "python.diagnostics.sourceMapsEnabled": true,
+    "vsintellicode.features.python.deepLearning": "enabled",
+    "python.analysis.indexing": true,
+    "python.languageServer": "Pylance",
+    "python.autoComplete.addBrackets": true,
+    "python.analysis.completeFunctionParens": true,
     "python.analysis.typeCheckingMode": "basic",
     "python.analysis.diagnosticSeverityOverrides": {
         "reportIncompatibleMethodOverride": "warning"
@@ -9,5 +19,59 @@
         "**/.git/subtree-cache/**": true,
         "**/.hg/store/**": true,
         "**/logs/**": true,
-    }
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "wandb": true,
+        ".allennlp_models": true,
+        ".venv*/**": true,
+        "**/.venv*/": true
+    },
+    "flake8.args": [
+        "--config",
+        "${workspaceFolder}/.flake8",
+    ],
+    "flake8.severity": {
+        "D101": "Warning", //public class/method without doc string
+        "E704": "Hint", // multiple lines
+    },
+    "mypy-type-checker.args": [
+        "--config-file",
+        "${workspaceFolder}/pyproject.toml"
+    ],
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+    },
+    "black-formatter.args": [
+        "--config",
+        "${workspaceFolder}/pyproject.toml"
+    ],
+    "python.analysis.refactoring.allowMovingSymbols": true,
+    "spellright.ignoreFiles": [
+        "**/.gitignore",
+        "**/.spellignore"
+    ],
+    "todo-tree.filtering.excludeGlobs": [
+        "**/node_modules/*/**",
+        "*.ipynb"
+    ],
+    // TODO Tree
+    "todo-tree.regex.subTagRegex": "^\\s*\\((.*)\\)",
+    "todo-tree.regex.enableMultiLine": false, // multiline create lot of parsing issues
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "MAYBE",
+        "CLEANUP",
+        "CHECK",
+        "TODO",
+        "INFO",
+        "[ ]",
+        "[x]",
+    ],
 }

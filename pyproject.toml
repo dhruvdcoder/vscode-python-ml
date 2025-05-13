@@ -1,0 +1,21 @@
+
+# We are still using setup.py based build system but we need this file for the config of black
+[build-system]
+requires = [
+    "setuptools",
+    "wheel",
+]
+
+[tool.black]
+# https://github.com/psf/black
+line-length = 79
+target-version = ["py37"]
+exclude = "(.eggs|.git|.hg|.mypy_cache|.nox|.tox|.venv*|.svn|_build|buck-out|build|dist|__pycache__)"
+
+[tool.mypy]
+allow_redefinition = true
+
+# some module specific settings
+[[tool.mypy.overrides]]
+module = ["setuptools"]
+ignore_missing_imports = true 

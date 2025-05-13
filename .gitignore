@@ -1,0 +1,33 @@
+# Uncomment vscode 
+# .vscode/** 
+__pycache__
+.venv*
+*.pyc
+**.DS_Store
+**.coverage
+**.hypothesis
+coverage.xml
+**.idea
+docstring-coverage.txt
+.mypy_cache/
+data/**
+checkpoints/**
+logs/**
+debug_logs/**
+**.egg-info
+tokens.json
+temp
+temp2
+wandb
+lib
+# ignore all notebooks
+.cursorignore
+.specstory
+before_dep.txt
+varlen_samples_debug/unconditional_samples copy.json
+varlen_samples_debug/unconditional_samples.json
+*.arrow
+torch_compile_debug
+.secrets.env
+**/.ipynb_checkpoints/
+lib 
