@@ -1,0 +1,13 @@
+{
+    "jupyter.debugJustMyCode": false,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportIncompatibleMethodOverride": "warning"
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.hg/store/**": true,
+        "**/logs/**": true,
+    }
+}
